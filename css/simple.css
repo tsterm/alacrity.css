@@ -7,7 +7,7 @@
   /* Set sans-serif & mono fonts */
 
   --sans-font: 'Inter', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   /*--mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
 
   /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
@@ -74,7 +74,7 @@ body {
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
-  background-image:  url('/assets/bg.svg') ;
+  background-image:  url('bg.svg') ;
   background-repeat: no-repeat;
   background-position: center top;
   background-clip: content-box;
@@ -82,6 +82,43 @@ body {
 
 
 }
+
+.small-multiples {
+  margin-top: 30px;
+}
+.small-multiples-child {
+  position: relative;
+  float: left;
+  height: 210px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.small-multiples-child:before {
+  content: "";
+  background: var(--accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 20%;
+}
+.small-multiples-title {
+  width: 180px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.small-multiples-chart {
+  position: absolute;
+  bottom: 25px;
+}
+.as-of-time {
+  clear: left;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 @media only screen and (max-height: 750px) {
 
   body {
@@ -127,10 +164,6 @@ nav {
   align-items: center;
   margin: auto;
 flex-wrap: wrap;
-  }
-
-
-}
   }
 
 nav a {
@@ -185,7 +218,7 @@ footer {
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: 5rem;
-  background-image:  url('/assets/bg.svg') ;
+  background-image:  url('bg.svg') ;
   background-repeat: no-repeat;
   background-position: center top;
 
@@ -211,8 +244,8 @@ h3 {
 }
 
 h4 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.2rem); font-weight: 500; letter-spacing: -0.05em
+  font-size: calc(var(--base-fontsize));
+  margin-top: calc(var(--line-height) * 1.2rem); font-weight: 700; letter-spacing: -0.05em
 }
 
 h5 {
@@ -411,11 +444,10 @@ input {
  border-right: none;
   box-shadow: none;
   box-sizing: border-box;
-  width: 60%;
+  width: calc(100% - 5.5rem);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: 16em;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
@@ -554,7 +586,7 @@ textarea {
 }
 
 /* Makes input fields wider on smaller screens */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 500px) {
   textarea,
   select,
   input {
@@ -908,21 +940,22 @@ p.about-text {
 
 
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) { */
 
-  p.about-text {
-  max-width: 50%
-}
-.table-titles {
-  width: 100%;
-  padding: 0.5rem 0;
-}
-.graph {
-  width: 100%;
-  padding-right: 1rem;
-  margin-bottom: 1rem;
-}
+    p.about-text {
+    max-width: 50%
+  }
+  .table-titles {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .graph {
+    width: 100%;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
 
+}
 
 @media only screen and (max-width: 768px) {
   h1 {
@@ -933,7 +966,7 @@ p.about-text {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 a, p {
 font-size: 1.2rem;
@@ -973,7 +1006,7 @@ width: 30rem;
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 a, p {
 font-size: 1rem;
@@ -1022,7 +1055,7 @@ font-size: 1rem;
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 a, p {
 font-size: 1rem;
@@ -1033,15 +1066,14 @@ font-size: 1rem;
 
 }
 .input-nav {
-    width: 18rem;
-  }
+  width: 18rem;
+}
 
- .search-container-m {
-  min-width: auto;
-  }
+.search-container-m {
+min-width: auto;
+}
 
-  }
-
+}
 
 
 
